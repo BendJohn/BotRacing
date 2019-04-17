@@ -11,3 +11,10 @@ To Do:<br/>
 Will begin creating a map for the algorithms to run through.<br/>
 Problems:
 1. Compile errors, cannot project a graph using ofxGraph properly.<br/>
+#### 4/16/2019
+Resolved graph issue. Begining project! Creating a single mini-problem for the bots to go through. Following of-snake style..<br/>
+To Do:<br/>
+spruce up map to make it look nice<br/>
+add myTest to github so I can commit stuff<br/>
+Problems:
+1. Cannot add my project to github.<br/>
