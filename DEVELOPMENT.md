@@ -18,3 +18,10 @@ spruce up map to make it look nice<br/>
 add myTest to github so I can commit stuff<br/>
 Problems:
 1. Cannot add my project to github.<br/>
+#### 4/17/2019
+Resolved git tracking issue. Creating a single mini-problem for the bots to go through. Following of-snake style..<br/>
+To Do:<br/>
+spruce up map to make it look nice<br/>
+add myTest to github so I can commit stuff<br/>
+Problems:
+1. I'm an idiot.<br/>
