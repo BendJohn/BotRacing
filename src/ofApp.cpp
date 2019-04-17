@@ -2,7 +2,19 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+	// do some initialization
 
+	// set the size of the window
+	ofSetWindowShape(1000, 500);
+
+	// set title of window
+	ofSetWindowTitle("Bot Race");
+
+	// set color of window to red (why not)
+	ofSetBackgroundColor(255, 0, 0);
+
+	// the rate at which the program runs (FPS)
+	ofSetFrameRate(15);
 }
 
 //--------------------------------------------------------------
@@ -12,7 +24,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+	drawObstacle();
 }
 
 //--------------------------------------------------------------
@@ -68,4 +80,10 @@ void ofApp::gotMessage(ofMessage msg){
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
 
+}
+
+void ofApp::drawObstacle() {
+	ofRectangle myRect(ofGetWindowWidth() / 2, 100, 50, ofGetWindowHeight() - 100); // Create obstacle
+	ofSetColor(0, 0, 255); // set color to blue
+	ofDrawRectRounded(myRect, 10); // Draw obstacle
 }

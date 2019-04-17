@@ -1,8 +1,11 @@
 #pragma once
 
 #include "ofMain.h"
+#include "obstacle.h"
 
 class ofApp : public ofBaseApp{
+	private:
+		void drawObstacle();
 
 	public:
 		void setup();
