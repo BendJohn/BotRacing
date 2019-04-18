@@ -2,10 +2,14 @@
 
 #include "ofMain.h"
 #include "obstacle.h"
+#include "randomBot.h"
 
 class ofApp : public ofBaseApp{
 	private:
-		void drawObstacle();
+		obstacle obs1; // Holds information about moving rod.
+		randomBot rand1;  // Holds information about the random bot.
+		void drawObstacle(); // Draw moving rod that the bots have to get through
+		void drawRandomBot(); // Draw the random bot
 
 	public:
 		void setup();

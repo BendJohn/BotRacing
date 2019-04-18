@@ -25,3 +25,9 @@ spruce up map to make it look nice<br/>
 add myTest to github so I can commit stuff<br/>
 Problems:
 1. I'm an idiot.<br/>
+#### 4/18/2019
+Added a pretty background, obstacle and a random bot.<br/>
+To Do:<br/>
+create a helper class to give bot information about the obstacle.<br/>
+Problems:
+1. The obstacle isn't moving the way I want to. For now, this isn't a big issue.<br/>
