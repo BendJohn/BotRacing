@@ -25,14 +25,20 @@ obstacle::obstacle()
 	bottom_boxsize = v2;
 }
 
-ofVec2f obstacle::getTopCorner()
+void obstacle::update()
 {
 	offset += 10;
 
 	ofVec2f v1;
 	v1.set(ofGetWindowWidth() / 2, 100 - offset % 100);
 	top_corner = v1;
-	
+
+	ofVec2f v2;
+	v2.set(ofGetWindowWidth() / 2, ofGetWindowHeight() - offset);
+}
+
+ofVec2f obstacle::getTopCorner()
+{	
 	return top_corner;
 }
 
@@ -48,8 +54,6 @@ ofVec2f obstacle::getBottomCorner()
 
 ofVec2f obstacle::getBottomSize()
 {
-	ofVec2f v1;
-	v1.set(ofGetWindowWidth() / 2, ofGetWindowHeight() - offset);
 	return bottom_boxsize;
 }
 

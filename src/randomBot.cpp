@@ -17,6 +17,17 @@ randomBot::randomBot(ofVec2f v1, ofVec2f v2)
 	boxsize = v2;
 }
 
+BotDirection randomBot::chooseDirection()
+{
+	return RIGHT;
+}
+
+void randomBot::update()
+{
+	BotDirection next_move = chooseDirection();
+
+}
+
 ofVec2f randomBot::getTopCorner()
 {
 	return top_corner;

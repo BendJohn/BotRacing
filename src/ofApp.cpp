@@ -88,6 +88,7 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 }
 
 void ofApp::drawObstacle() {
+	obs1.update();
 	ofVec2f top_position = obs1.getTopCorner();
 	ofVec2f bottom_position = obs1.getBottomCorner();
 	ofVec2f top_size = obs1.getTopSize();
