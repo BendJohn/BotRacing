@@ -29,5 +29,5 @@ Most of the libraries I will use will be to create the graphics of the problem g
 3. *ofxChart*: To graph the differences in the AI bots, and to compare them against one another.
 
 ## Minimum Viable Product
-The minimum viable product is to create an application with 3 AI bots for 1 minigame and chart the differences in time of the three minibots.
+The minimum viable product is to create an application with 2 AI bots for 1 minigame and chart the differences in time for the 2 minibots.
 The mimimum viable graphics would be two pages, one with a single minigame and another with the results that automatically pop up after all the AI bots succeed.

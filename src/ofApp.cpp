@@ -26,7 +26,10 @@ void ofApp::draw(){
 	ofImage background;
 	background.load("botgame_bg.png");
 	background.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
+
+	// Draw game components
 	drawObstacle();
+	drawRandomBot();
 }
 
 //--------------------------------------------------------------
@@ -95,12 +98,16 @@ void ofApp::drawObstacle() {
 	ofDrawRectRounded(topHalf, 10, 10, 0, 0); // Draw obstacle
 	ofSetColor(0, 255, 0); // set color to green
 	ofDrawRectRounded(bottomHalf, 0, 0, 10, 10); // Draw obstacle
-	ofSetColor(255, 255, 255);
+	ofSetColor(255, 255, 255); // revert color back to white
 }
 
 void ofApp::drawRandomBot()
 {
 	ofVec2f top_position = rand1.getTopCorner();
 	ofVec2f size = rand1.getSize();
-	ofRectangle topHalf(top_position.x, top_position.y, size.x, size.y);
+	ofRectangle bot(top_position.x, top_position.y, size.x, size.y);
+	ofSetColor(225, 0, 0); // set color to red
+	ofDrawRectangle(bot); // Draw random bot square
+	ofSetColor(255, 255, 255); // revert color back to white
+
 }

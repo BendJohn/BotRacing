@@ -3,7 +3,7 @@
 randomBot::randomBot()
 {
 	ofVec2f v1;
-	v1.set(100, ofGetWindowHeight() / 2);
+	v1.set(100, ofGetWindowHeight() / 3);
 	top_corner = v1;
 
 	ofVec2f v2;
