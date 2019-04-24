@@ -110,5 +110,5 @@ void ofApp::drawRandomBot()
 	ofSetColor(225, 0, 0); // set color to red
 	ofDrawRectangle(bot); // Draw random bot square
 	ofSetColor(255, 255, 255); // revert color back to white
-
+	rand1.update(); // Updates random bot movement
 }

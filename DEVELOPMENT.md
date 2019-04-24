@@ -31,3 +31,9 @@ To Do:<br/>
 create a helper class to give bot information about the obstacle.<br/>
 Problems:
 1. The obstacle isn't moving the way I want to. For now, this isn't a big issue.<br/>
+#### 4/24/2019
+Got random bot to move around the screen in random directions..<br/>
+To Do:<br/>
+create a helper class to give bot information about the obstacle.<br/>
+Problems:
+1. The obstacle isn't moving the way I want to. For now, this isn't a big issue.<br/>
