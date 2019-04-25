@@ -1,11 +1,9 @@
 #include "obstacle.h"
 
-obstacle::obstacle(ofVec2f v1, ofVec2f v2, ofVec2f v3, ofVec2f v4)
+obstacle::obstacle(ofVec2f v1, ofVec2f v2)
 {
 	top_corner = v1;
 	top_boxsize = v2;
-	bottom_corner = v3;
-	bottom_boxsize = v4;
 }
 
 obstacle::obstacle()

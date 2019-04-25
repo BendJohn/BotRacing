@@ -39,7 +39,7 @@ Problems:
 1. The program still moves the bot after it "dies" -- waste of space..<br/>
 2. Need to get started on another bot and hopefully finish visuals by next code review.
 #### 4/25/2019
-Created a conditional bot, that will try to move in places where it won't die..<br/>
+Created a conditional bot, that will try to move in places where it won't die.<br/>
 ##### ToDo <br/>
 Problems:
 1. The program still moves the bot after it "dies" -- waste of space.<br/>

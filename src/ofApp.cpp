@@ -28,7 +28,6 @@ void ofApp::draw(){
 	ofImage background;
 	background.load("botgame_bg.png");
 	background.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
-
 	// Draw game components
 	drawRandomBot();
 	// drawConditionalBot();
