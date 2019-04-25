@@ -67,6 +67,9 @@
     <ClCompile Include="src\gameEngine.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\conditionalBot.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -153,6 +156,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\gameEngine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\conditionalBot.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
