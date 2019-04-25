@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "obstacle.h"
 #include "randomBot.h"
+#include "gameEngine.h"
 
 class ofApp : public ofBaseApp{
 	private:

@@ -6,7 +6,7 @@ typedef enum {
 	UP = 0,
 	DOWN,
 	RIGHT,
-	LEFT
+	// LEFT
 } BotDirection;
 	
 class randomBot {
@@ -20,4 +20,5 @@ public:
 	void update(); // update the randomBot's position based on where it should move
 	ofVec2f getTopCorner(); // Return top corner
 	ofVec2f getSize(); // Return top size
+	void setSize(int a, int b); // Set the random bot's size (only called when set to 0 and exterminated)
 };

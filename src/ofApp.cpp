@@ -1,5 +1,7 @@
 #include "ofApp.h"
 
+using namespace gameEngine;
+
 //--------------------------------------------------------------
 void ofApp::setup(){
 	// do some initialization
@@ -106,6 +108,17 @@ void ofApp::drawRandomBot()
 {
 	ofVec2f top_position = rand1.getTopCorner();
 	ofVec2f size = rand1.getSize();
+
+	std::cout << "top position x" << std::endl;
+	std::cout << top_position.x << std::endl;
+	std::cout << "size" << std::endl;
+	std::cout << size << std::endl;
+
+	// Check if bot has crashed
+	if (shouldDelete(top_position, size, obs1)) {
+		rand1.setSize(0, 0);
+	}
+
 	ofRectangle bot(top_position.x, top_position.y, size.x, size.y);
 	ofSetColor(225, 0, 0); // set color to red
 	ofDrawRectangle(bot); // Draw random bot square

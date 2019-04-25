@@ -29,11 +29,11 @@ void randomBot::update()
 	if (next_move == RIGHT) {
 		ofVec2f new_top_corner(top_corner.x + 10, top_corner.y);
 		top_corner = new_top_corner;
-	}
+	}/*
 	else if (next_move == LEFT) {
 		ofVec2f new_top_corner(top_corner.x - 10, top_corner.y);
 		top_corner = new_top_corner;
-	}
+	}*/
 	else if (next_move == UP) {
 		ofVec2f new_top_corner(top_corner.x, top_corner.y - 10);
 		top_corner = new_top_corner;
@@ -52,4 +52,9 @@ ofVec2f randomBot::getTopCorner()
 ofVec2f randomBot::getSize()
 {
 	return boxsize;
+}
+
+void randomBot::setSize(int a, int b)
+{
+	boxsize.set(a, b);
 }
