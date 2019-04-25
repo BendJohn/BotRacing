@@ -33,7 +33,7 @@ Problems:
 1. The obstacle isn't moving the way I want to. For now, this isn't a big issue.<br/>
 #### 4/24/2019
 Got random bot to move around the screen in random directions..<br/>
-created a helper class to give bot information about the obstacle, called game engine class. The class kills the bot when it hits the bottom.<br/>
+Created a helper class to give bot information about the obstacle, called game engine class. The class kills the bot when it hits the bottom.<br/>
 ##### ToDo <br/>
 Problems:
 1. The program still moves the bot after it "dies" -- waste of space..<br/>
@@ -42,5 +42,5 @@ Problems:
 Created a conditional bot, that will try to move in places where it won't die..<br/>
 ##### ToDo <br/>
 Problems:
-1. The program still moves the bot after it "dies" -- waste of space..<br/>
-2. Need to get started on another bot and hopefully finish visuals by next code review.
+1. The program still moves the bot after it "dies" -- waste of space.<br/>
+2. The shouldDelete function is a little wack.

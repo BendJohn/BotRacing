@@ -5,6 +5,7 @@
 class conditionalBot {
 	ofVec2f top_corner; // Tracking the top left corner of the bot
 	ofVec2f boxsize; // Returns width, height
+	obstacle obs; // To keep track of obstacle motion
 
 public:
 	conditionalBot(); // Empty constructor

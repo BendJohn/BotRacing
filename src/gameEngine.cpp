@@ -19,6 +19,11 @@ namespace gameEngine {
 
 	bool shouldDelete(ofVec2f bot_top_corner, ofVec2f bot_size, obstacle obj)
 	{
+		std::cout << bot_top_corner << std::endl;
+		std::cout << bot_size << std::endl;
+		std::cout << obj.getTopCorner() << std::endl;
+		std::cout << obj.getTopSize() << std::endl;
+
 		// check for hitting obstacle from side
 		if (hasCrashed(bot_top_corner.x, bot_size.x, obj.getTopCorner().x, obj.getTopSize().x)) {
 			return true;
