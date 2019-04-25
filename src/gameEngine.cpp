@@ -19,13 +19,9 @@ namespace gameEngine {
 
 	bool shouldDelete(ofVec2f bot_top_corner, ofVec2f bot_size, obstacle obj)
 	{
-		std::cout << bot_top_corner << std::endl;
-		std::cout << bot_size << std::endl;
-		std::cout << obj.getTopCorner() << std::endl;
-		std::cout << obj.getTopSize() << std::endl;
-
 		// check for hitting obstacle from side
 		if (hasCrashed(bot_top_corner.x, bot_size.x, obj.getTopCorner().x, obj.getTopSize().x)) {
+			std::cout << "true" << std::endl;
 			return true;
 		}
 
@@ -37,24 +33,29 @@ namespace gameEngine {
 
 		// check for hitting top wall
 		if (hasCrashed(bot_top_corner.x, bot_size.x, 0, -100)) {
+			std::cout << "----true" << std::endl;
 			return true;
 		}
 
 		// check for hitting bottom wall
 		if (hasCrashed(bot_top_corner.y, bot_size.y, ofGetWindowHeight(), 100)) {
+			std::cout << "true" << std::endl;
 			return true;
 		}
 
 		// check for hitting left wall
 		if (hasCrashed(bot_top_corner.x, bot_size.x, obj.getTopCorner().x, obj.getTopSize().x)) {
+			std::cout << "true" << std::endl;
 			return true;
 		}
 
 		// check for hitting right wall
 		if (hasCrashed(bot_top_corner.x, bot_size.x, obj.getTopCorner().x, obj.getTopSize().x)) {
+			std::cout << "true" << std::endl;
 			return true;
 		}
 
+		std::cout << "false" << std::endl;
 		return false;
 	}
 }

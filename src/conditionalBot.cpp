@@ -36,13 +36,14 @@ void conditionalBot::update()
 	if (next_move == RIGHT) {
 		new_top_corner.set(top_corner.x + 10, top_corner.y);
 		if (shouldDelete(new_top_corner, boxsize, obs)) {
-			next_move == UP;
+			next_move = UP;
 		}
 	} /*
 	else if (next_move == LEFT) {
 		ofVec2f new_top_corner(top_corner.x - 10, top_corner.y);
 		top_corner = new_top_corner;
 	}*/
+	std::cout << next_move << std::endl;
 	if (next_move == UP) {
 		new_top_corner.set(top_corner.x, top_corner.y - 10);
 		if (shouldDelete(new_top_corner, boxsize, obs)) {
