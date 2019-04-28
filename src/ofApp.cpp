@@ -32,7 +32,6 @@ void ofApp::draw(){
 	drawRandomBot();
 	drawConditionalBot();
 	drawObstacle();
-	// Yeart
 }
 
 //--------------------------------------------------------------
