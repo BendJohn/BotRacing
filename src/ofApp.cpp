@@ -30,7 +30,7 @@ void ofApp::draw(){
 	background.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	// Draw game components
 	drawRandomBot();
-	// drawConditionalBot();
+	drawConditionalBot();
 	drawObstacle();
 }
 
