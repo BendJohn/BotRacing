@@ -44,3 +44,10 @@ Created a conditional bot, that will try to move in places where it won't die.<b
 Problems:
 1. The program still moves the bot after it "dies" -- waste of space.<br/>
 2. The shouldDelete function is a little wack.
+
+#### 4/28/2019
+Created a conditional bot, that successfully finishes the course, probabily in the fastest possible time..<br/>
+##### ToDo <br/>
+Problems:
+1. The program still moves the bot after it "dies" -- waste of space.<br/>
+2. Need to preprocess a genetic bot.
