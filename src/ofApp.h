@@ -5,15 +5,18 @@
 #include "randomBot.h"
 #include "conditionalBot.h"
 #include "gameEngine.h"
+#include "simpleGeneticBot.h"
 
 class ofApp : public ofBaseApp{
 	private:
 		obstacle obs1; // Holds information about moving rod.
 		randomBot rand1;  // Holds information about the random bot.
 		conditionalBot cond1; // Holds information about the conditional bot.
+		simpleGeneticBot gen1; // Holds information about the simple genetic bot.
 		void drawObstacle(); // Draw moving rod that the bots have to get through
 		void drawRandomBot(); // Draw the random bot
 		void drawConditionalBot(); // Draw the conditional bot
+		void drawSimpleGeneticBot(); // Draw the simple genetic bot
 
 	public:
 		void setup();

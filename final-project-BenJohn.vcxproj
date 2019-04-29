@@ -201,6 +201,7 @@
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
     <ClCompile Include="src\randomBot.cpp" />
+    <ClCompile Include="src\simpleGeneticBot.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\conditionalBot.h" />
@@ -222,6 +223,7 @@
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
     <ClInclude Include="src\randomBot.h" />
+    <ClInclude Include="src\simpleGeneticBot.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

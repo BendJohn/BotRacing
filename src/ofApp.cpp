@@ -29,8 +29,9 @@ void ofApp::draw(){
 	background.load("botgame_bg.png");
 	background.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	// Draw game components
-	drawRandomBot();
-	drawConditionalBot();
+	// drawRandomBot();
+	// drawConditionalBot();
+	drawSimpleGeneticBot();
 	drawObstacle();
 }
 
@@ -127,7 +128,6 @@ void ofApp::drawConditionalBot()
 	ofVec2f size = cond1.getSize();
 
 	// Check if bot has crashed
-	std::cout << "Actual shouldDelete function." << std::endl;
 	if (shouldDelete(top_position, size, obs1)) {
 		cond1.setSize(0, 0);
 	}
@@ -137,4 +137,21 @@ void ofApp::drawConditionalBot()
 	ofDrawRectangle(bot); // Draw random bot square
 	ofSetColor(255, 255, 255); // revert color back to white
 	cond1.update(); // Updates random bot movement
+}
+
+void ofApp::drawSimpleGeneticBot()
+{
+	ofVec2f top_position = gen1.getTopCorner();
+	ofVec2f size = gen1.getSize();
+
+	// Check if bot has crashed
+	if (shouldDelete(top_position, size, obs1)) {
+		gen1.setSize(0, 0);
+	}
+
+	ofRectangle bot(top_position.x, top_position.y, size.x, size.y);
+	ofSetColor(0, 0, 0); // set color to black
+	ofDrawRectangle(bot); // Draw genetic bot square
+	ofSetColor(255, 255, 255); // revert color back to white
+	gen1.update(); // Updates random bot movement
 }

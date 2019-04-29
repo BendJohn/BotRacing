@@ -1,5 +1,6 @@
 #pragma once
 #include "ofMain.h"
+#include <iostream>
 #include "obstacle.h"
 
 // Enum that represents all possible directions that the bot can be moving
