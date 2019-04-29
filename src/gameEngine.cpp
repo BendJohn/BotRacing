@@ -3,10 +3,9 @@
 namespace gameEngine {
 	bool isInObstacle(int bot_x, int bot_y, obstacle obj)
 	{
-		std::cout << bot_x << std::endl;
-		std::cout << bot_y << std::endl;
-		std::cout << obj.getTopCorner().x << std::endl;
-		std::cout << obj.getTopSize().x << std::endl;
+		if (bot_x < 0 || bot_y < 0) {
+			return true;
+		}
 		if (bot_x >= obj.getTopCorner().x && bot_x <= obj.getTopCorner().x + obj.getTopSize().x) {
 			if (bot_y >= obj.getTopCorner().y && bot_y <= obj.getTopCorner().y + obj.getTopSize().y) {
 				return true;

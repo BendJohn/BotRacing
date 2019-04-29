@@ -57,7 +57,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+	std::cout << "--------------Should Die------------------" << std::endl;
 }
 
 //--------------------------------------------------------------
@@ -113,6 +113,7 @@ void ofApp::drawRandomBot()
 	// Check if bot has crashed
 	if (shouldDelete(top_position, size, obs1)) {
 		rand1.setSize(0, 0);
+		return;
 	}
 
 	ofRectangle bot(top_position.x, top_position.y, size.x, size.y);
@@ -130,6 +131,7 @@ void ofApp::drawConditionalBot()
 	// Check if bot has crashed
 	if (shouldDelete(top_position, size, obs1)) {
 		cond1.setSize(0, 0);
+		return;
 	}
 
 	ofRectangle bot(top_position.x, top_position.y, size.x, size.y);
@@ -147,6 +149,7 @@ void ofApp::drawSimpleGeneticBot()
 	// Check if bot has crashed
 	if (shouldDelete(top_position, size, obs1)) {
 		gen1.setSize(0, 0);
+		return;
 	}
 
 	ofRectangle bot(top_position.x, top_position.y, size.x, size.y);

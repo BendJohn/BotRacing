@@ -20,7 +20,7 @@ simpleGeneticBot::simpleGeneticBot(ofVec2f v1, ofVec2f v2)
 BotDirection simpleGeneticBot::chooseDirection()
 {
 	BotDirection random_dir = static_cast<BotDirection>(rand() % 4);
-	return RIGHT;
+	return random_dir;
 }
 
 void simpleGeneticBot::update()

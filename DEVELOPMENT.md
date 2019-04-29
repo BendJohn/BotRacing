@@ -44,10 +44,17 @@ Created a conditional bot, that will try to move in places where it won't die.<b
 Problems:
 1. The program still moves the bot after it "dies" -- waste of space.<br/>
 2. The shouldDelete function is a little wack.
-
 #### 4/28/2019
-Created a conditional bot, that successfully finishes the course, probabily in the fastest possible time..<br/>
+Created a conditional bot, that successfully finishes the course, probabily in the fastest possible time. Unfortunately doing that created a bug is the shouldDelete function (the one that determines whether the bot hit an obstacle.<br/>
 ##### ToDo <br/>
 Problems:
 1. The program still moves the bot after it "dies" -- waste of space.<br/>
-2. Need to preprocess a genetic bot.
+2. Need to preprocess a genetic bot.<br/>
+3. Need to fix the shouldDelete function.
+#### 4/29/2019
+Working on the simple genetic bot. The shouldDelete function isn't working so I'm going to try to fix that first.<br/>
+Fixed the shouldDelete function. The error was assuming the point given was the top left corner, but if the size is negative, it would be the bottom left corner..<br/>
+##### ToDo <br/>
+Problems:
+1. The program still moves the bot after it "dies" -- waste of space.<br/>
+2. Need to preprocess a genetic bot.<br/>
