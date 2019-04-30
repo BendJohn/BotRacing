@@ -73,6 +73,9 @@
     <ClCompile Include="src\simpleGeneticBot.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\population.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -165,6 +168,9 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\simpleGeneticBot.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\population.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

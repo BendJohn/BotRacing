@@ -200,6 +200,7 @@
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.cpp" />
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
     <ClCompile Include="..\..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
+    <ClCompile Include="src\population.cpp" />
     <ClCompile Include="src\randomBot.cpp" />
     <ClCompile Include="src\simpleGeneticBot.cpp" />
   </ItemGroup>
@@ -222,6 +223,7 @@
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h" />
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
     <ClInclude Include="..\..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
+    <ClInclude Include="src\population.h" />
     <ClInclude Include="src\randomBot.h" />
     <ClInclude Include="src\simpleGeneticBot.h" />
   </ItemGroup>

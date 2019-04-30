@@ -54,6 +54,7 @@ Problems:
 #### 4/29/2019
 Working on the simple genetic bot. The shouldDelete function isn't working so I'm going to try to fix that first.<br/>
 Fixed the shouldDelete function. The error was assuming the point given was the top left corner, but if the size is negative, it would be the bottom left corner..<br/>
+Created a lot of methods for the genetic bot: getFitness(), and its helpers. GetFitness calculates how good the bot's position is at a certain point. I also stop the bots movements 6 moves after it has gone through its previous generations moves.<br/>
 ##### ToDo <br/>
 Problems:
 1. The program still moves the bot after it "dies" -- waste of space.<br/>
