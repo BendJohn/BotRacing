@@ -20,7 +20,7 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+	pop1.update(obs1);
 }
 
 //--------------------------------------------------------------
@@ -31,7 +31,7 @@ void ofApp::draw(){
 	// Draw game components
 	// drawRandomBot();
 	// drawConditionalBot();
-	drawSimpleGeneticBot();
+	// drawSimpleGeneticBot();
 	drawObstacle();
 }
 

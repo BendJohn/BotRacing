@@ -9,6 +9,8 @@ simpleGeneticBot::simpleGeneticBot()
 	ofVec2f v2;
 	v2.set(20, 20);
 	boxsize = v2;
+
+	move_number = 0;
 		
 	for (size_t i = 0; i < 20; i++) {
 		moves.push_back(UP);
@@ -25,6 +27,16 @@ simpleGeneticBot::simpleGeneticBot(ofVec2f v1, ofVec2f v2, vector<BotDirection> 
 	moves = dirs;
 }
 
+/*simpleGeneticBot::simpleGeneticBot(simpleGeneticBot & copy_obj)
+{
+	this.top_corner = copy_obj.top_corner;
+	this.boxsize = copy_obj.boxsize;
+	this.move_number = copy_obj.move_number;
+	this.moves = copy_obj.moves;
+	this.new_moves = copy_obj.new_moves;
+
+}*/
+
 BotDirection simpleGeneticBot::chooseDirection()
 {
 	if (moves.size() > move_number) {
@@ -37,6 +49,10 @@ BotDirection simpleGeneticBot::chooseDirection()
 void simpleGeneticBot::update()
 {
 	BotDirection next_move = chooseDirection();
+	std::cout << next_move << std::endl;
+	std::cout << boxsize.x << std::endl;
+	std::cout << 5 + moves.size() << std::endl;
+	std::cout << move_number << std::endl;
 	if (boxsize.x != 0 && 5 + moves.size() >= move_number) {
 		new_moves.push_back(next_move);
 	}

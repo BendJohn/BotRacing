@@ -59,3 +59,9 @@ Created a lot of methods for the genetic bot: getFitness(), and its helpers. Get
 Problems:
 1. The program still moves the bot after it "dies" -- waste of space.<br/>
 2. Need to preprocess a genetic bot.<br/>
+#### 4/30/2019
+Created a population class that holds 100 simple genetic bots, which updates and sorts the bots. It also has a method that creates the next generation.<br/>
+##### ToDo <br/>
+Problems:
+1. The program still moves the bot after it "dies" -- waste of space.<br/>
+2. Need to fix the next generation bot and make everything run cohesively.<br/>
