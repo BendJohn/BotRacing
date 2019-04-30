@@ -21,6 +21,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
 	pop1.update(obs1);
+	obs1.update();
 }
 
 //--------------------------------------------------------------
@@ -31,7 +32,8 @@ void ofApp::draw(){
 	// Draw game components
 	// drawRandomBot();
 	// drawConditionalBot();
-	// drawSimpleGeneticBot();
+	// drawSimpleGeneticBot(gen1);
+	drawPopulation();
 	drawObstacle();
 }
 
@@ -141,10 +143,10 @@ void ofApp::drawConditionalBot()
 	cond1.update(); // Updates random bot movement
 }
 
-void ofApp::drawSimpleGeneticBot()
+void ofApp::drawSimpleGeneticBot(simpleGeneticBot& gen)
 {
-	ofVec2f top_position = gen1.getTopCorner();
-	ofVec2f size = gen1.getSize();
+	ofVec2f top_position = gen.getTopCorner();
+	ofVec2f size = gen.getSize();
 
 	// Check if bot has crashed
 	if (shouldDelete(top_position, size, obs1)) {
@@ -156,5 +158,13 @@ void ofApp::drawSimpleGeneticBot()
 	ofSetColor(0, 0, 0); // set color to black
 	ofDrawRectangle(bot); // Draw genetic bot square
 	ofSetColor(255, 255, 255); // revert color back to white
-	gen1.update(); // Updates random bot movement
+	gen.update(); // Updates random bot movement
+}
+
+void ofApp::drawPopulation()
+{
+	for (size_t i = 0; i < pop1.generation.size(); i++) {
+		simpleGeneticBot &gen_bot = pop1.generation[i];
+		drawSimpleGeneticBot(gen_bot);
+	}
 }

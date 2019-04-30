@@ -61,6 +61,8 @@ Problems:
 2. Need to preprocess a genetic bot.<br/>
 #### 4/30/2019
 Created a population class that holds 100 simple genetic bots, which updates and sorts the bots. It also has a method that creates the next generation.<br/>
+Abstracted drawSimpleGeneticBot to take in a reference to a simple genetic bot.<br/>
+Created Genetic bot with population of size 10, and it fails to pass the obstacle.<br/>
 ##### ToDo <br/>
 Problems:
 1. The program still moves the bot after it "dies" -- waste of space.<br/>

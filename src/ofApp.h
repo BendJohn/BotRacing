@@ -18,7 +18,8 @@ class ofApp : public ofBaseApp{
 		void drawObstacle(); // Draw moving rod that the bots have to get through
 		void drawRandomBot(); // Draw the random bot
 		void drawConditionalBot(); // Draw the conditional bot
-		void drawSimpleGeneticBot(); // Draw the simple genetic bot
+		void drawSimpleGeneticBot(simpleGeneticBot& gen); // Draw the simple genetic bot
+		void drawPopulation(); // Draw the population of the genetic bot.
 
 	public:
 		void setup();

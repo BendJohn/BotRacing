@@ -13,7 +13,7 @@ class simpleGeneticBot {
 
 public:
 	simpleGeneticBot(); // Empty constructor
-	simpleGeneticBot(ofVec2f v1, ofVec2f v2, vector<BotDirection> dirs); // Fill up with position and height
+	simpleGeneticBot(vector<BotDirection> dirs); // Fill up with position and height
 	// simpleGeneticBot(simpleGeneticBot& copy_obj); // copies object
 	void update(); // update the randomBot's position based on where it should move
 	ofVec2f getTopCorner(); // Return top corner

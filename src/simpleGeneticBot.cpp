@@ -11,19 +11,20 @@ simpleGeneticBot::simpleGeneticBot()
 	boxsize = v2;
 
 	move_number = 0;
-		
-	for (size_t i = 0; i < 20; i++) {
-		moves.push_back(UP);
-	}
-	for (size_t i = 0; i < 20; i++) {
-		moves.push_back(RIGHT);
-	}
 }
 
-simpleGeneticBot::simpleGeneticBot(ofVec2f v1, ofVec2f v2, vector<BotDirection> dirs)
+simpleGeneticBot::simpleGeneticBot(vector<BotDirection> dirs)
 {
+	ofVec2f v1;
+	v1.set(100, ofGetWindowHeight() / 3);
 	top_corner = v1;
+
+	ofVec2f v2;
+	v2.set(20, 20);
 	boxsize = v2;
+
+	move_number = 0;
+
 	moves = dirs;
 }
 
@@ -49,11 +50,7 @@ BotDirection simpleGeneticBot::chooseDirection()
 void simpleGeneticBot::update()
 {
 	BotDirection next_move = chooseDirection();
-	std::cout << next_move << std::endl;
-	std::cout << boxsize.x << std::endl;
-	std::cout << 5 + moves.size() << std::endl;
-	std::cout << move_number << std::endl;
-	if (boxsize.x != 0 && 5 + moves.size() >= move_number) {
+	if (boxsize.x != 0 && 10 + moves.size() >= move_number) {
 		new_moves.push_back(next_move);
 	}
 	else {
@@ -100,7 +97,7 @@ int simpleGeneticBot::getMoveNumber()
 
 int simpleGeneticBot::getFitness()
 {
-	return top_corner.x * top_corner.x - top_corner.y;
+	return top_corner.x * top_corner.x - top_corner.y * top_corner.x;
 }
 
 vector<BotDirection> simpleGeneticBot::getNewMoves()
