@@ -45,11 +45,12 @@ void ofApp::update(){
 	simpleGeneticBot& genBot = pop1.generation[0];
 	int fitnessGen = genBot.getFitness();
 	int fitnessRand = rand1.getFitness();
+	int fitnessCond = cond1.getFitness();
 
 	vector<float>value;
 	value.push_back(fitnessGen * 1.0);
 	value.push_back(fitnessRand * 1.0);
-	value.push_back(10005);
+	value.push_back(fitnessCond * 1.0);
 
 	graph.add(value);
 }
@@ -60,11 +61,13 @@ void ofApp::draw(){
 	background.load("botgame_bg.png");
 	background.draw(0, 0, ofGetWindowWidth(), ofGetWindowHeight());
 	// Draw game components
-	// drawRandomBot();
-	// drawConditionalBot();
+	ofFill();
+	drawRandomBot();
+	drawConditionalBot();
 	// drawSimpleGeneticBot(gen1);
 	drawPopulation();
 	drawObstacle();
+	ofNoFill();
 	if (shouldDrawMap) {
 		drawMap();
 	}

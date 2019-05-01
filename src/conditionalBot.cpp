@@ -63,6 +63,11 @@ ofVec2f conditionalBot::getSize()
 	return boxsize;
 }
 
+int conditionalBot::getFitness()
+{
+	return (top_corner.x * top_corner.x - top_corner.y * top_corner.x) * boxsize.x;
+}
+
 void conditionalBot::setSize(int a, int b)
 {
 	boxsize.set(a, b);
