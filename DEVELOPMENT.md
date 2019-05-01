@@ -63,6 +63,9 @@ Problems:
 Created a population class that holds 100 simple genetic bots, which updates and sorts the bots. It also has a method that creates the next generation.<br/>
 Abstracted drawSimpleGeneticBot to take in a reference to a simple genetic bot.<br/>
 Created Genetic bot with population of size 10, and it fails to pass the obstacle.<br/>
+Genetic bot of size 100 successfully passes the obstacle. It chooses 10 new moves each generation.</br>
+Added graph ofApp, it is horrible. It errors whenver my mouse hovers over it.</br>
+Graph is now multiplot graphing the fitness of the genetic bot, hopefully will graph the "fitness" of other bots as well. </br>
 ##### ToDo <br/>
 Problems:
 1. The program still moves the bot after it "dies" -- waste of space.<br/>

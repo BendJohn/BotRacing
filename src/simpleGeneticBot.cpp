@@ -1,5 +1,7 @@
 #include "simpleGeneticBot.h"
 
+int kNumberOfMoves = 10;
+
 simpleGeneticBot::simpleGeneticBot()
 {
 	ofVec2f v1;
@@ -50,7 +52,7 @@ BotDirection simpleGeneticBot::chooseDirection()
 void simpleGeneticBot::update()
 {
 	BotDirection next_move = chooseDirection();
-	if (boxsize.x != 0 && 10 + moves.size() >= move_number) {
+	if (boxsize.x != 0 && kNumberOfMoves + moves.size() >= move_number) {
 		new_moves.push_back(next_move);
 	}
 	else {
@@ -97,7 +99,7 @@ int simpleGeneticBot::getMoveNumber()
 
 int simpleGeneticBot::getFitness()
 {
-	return top_corner.x * top_corner.x - top_corner.y * top_corner.x;
+	return (top_corner.x * top_corner.x - top_corner.y * top_corner.x) * boxsize.x;
 }
 
 vector<BotDirection> simpleGeneticBot::getNewMoves()

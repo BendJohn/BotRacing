@@ -13,5 +13,6 @@ public:
 	void update(); // update the randomBot's position based on where it should move
 	ofVec2f getTopCorner(); // Return top corner
 	ofVec2f getSize(); // Return top size
+	int getFitness(); // Get the "fitness" of this bot.
 	void setSize(int a, int b); // Set the random bot's size (only called when set to 0 and exterminated)
 };

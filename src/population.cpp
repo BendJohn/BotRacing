@@ -2,11 +2,12 @@
 
 using namespace gameEngine;
 
-int kNumberOfBots = 10;
+int kNumberOfBots = 100;
+int kNumberOfNewMoves = 10;
 
 population::population()
 {
-	for (size_t i = 0; i < 10; i++) {
+	for (size_t i = 0; i < kNumberOfBots; i++) {
 		simpleGeneticBot gen0Bot = simpleGeneticBot();
 		generation.push_back(gen0Bot);
 	}
@@ -28,7 +29,7 @@ void population::update(obstacle obs1)
 	round++;
 	std::cout << "Round: " << round << std::endl;
 	std::cout << "Generation: " << gen_number << std::endl;
-	if (round >= 10 * (gen_number + 1)) {
+	if (round >= kNumberOfNewMoves * (gen_number + 1)) {
 		nextGeneration();
 	}
 }

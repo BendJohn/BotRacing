@@ -54,6 +54,11 @@ ofVec2f randomBot::getSize()
 	return boxsize;
 }
 
+int randomBot::getFitness()
+{
+	return (top_corner.x * top_corner.x - top_corner.y * top_corner.x) * boxsize.x;
+}
+
 void randomBot::setSize(int a, int b)
 {
 	boxsize.set(a, b);

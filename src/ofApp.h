@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofxGraph.h"
 #include "obstacle.h"
 #include "randomBot.h"
 #include "conditionalBot.h"
@@ -20,6 +21,8 @@ class ofApp : public ofBaseApp{
 		void drawConditionalBot(); // Draw the conditional bot
 		void drawSimpleGeneticBot(simpleGeneticBot& gen); // Draw the simple genetic bot
 		void drawPopulation(); // Draw the population of the genetic bot.
+		void drawMap(); // Draw map of genetic bot
+		bool shouldDrawMap; // Whether or not to draw the map
 
 	public:
 		void setup();
@@ -37,5 +40,7 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
-		
+
+		const int OF_KEY_SPACE = 32;
+		ofxGraph graph;
 };

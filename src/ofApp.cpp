@@ -5,6 +5,7 @@ using namespace gameEngine;
 //--------------------------------------------------------------
 void ofApp::setup(){
 	// do some initialization
+	shouldDrawMap = false;
 
 	// set the size of the window
 	ofSetWindowShape(1000, 500);
@@ -12,7 +13,24 @@ void ofApp::setup(){
 	// set title of window
 	ofSetWindowTitle("Bot Race");
 
-	// set color of window to red (why not)
+	// sync graph with vertical refresh rate
+	ofSetVerticalSync(true);
+
+	// ofxGraph uses ofxGui as a internal setting UI
+	ofxGuiSetFont(ofToDataPath("ofxGraph/DIN Alternate Bold.ttf"), 10);
+
+	// ofxGraph Init
+	graph.setup("Genetic Bot Fitness");
+
+	// Set Graph Image
+	graph.setPosition(0, 100);
+	float windowWidth = ofGetWindowWidth() * 1.0;
+	float windowHeight = ofGetWindowHeight() * 1.0 - 100;
+	graph.setSize(windowWidth, windowHeight);
+
+	graph.setDx(1.0); // which means delta of time
+	graph.setColor(ofColor::white);  // ofColor(255,255,255)
+	graph.setLabel({ "Genetic Bot","Conditional Bot","Random Bot" });
 
 	// the rate at which the program runs (FPS)
 	ofSetFrameRate(15);
@@ -22,6 +40,18 @@ void ofApp::setup(){
 void ofApp::update(){
 	pop1.update(obs1);
 	obs1.update();
+
+	// Graphing!
+	simpleGeneticBot& genBot = pop1.generation[0];
+	int fitnessGen = genBot.getFitness();
+	int fitnessRand = rand1.getFitness();
+
+	vector<float>value;
+	value.push_back(fitnessGen * 1.0);
+	value.push_back(fitnessRand * 1.0);
+	value.push_back(10005);
+
+	graph.add(value);
 }
 
 //--------------------------------------------------------------
@@ -35,11 +65,19 @@ void ofApp::draw(){
 	// drawSimpleGeneticBot(gen1);
 	drawPopulation();
 	drawObstacle();
+	if (shouldDrawMap) {
+		drawMap();
+	}
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
+	int upper_key = toupper(key); // Standardize on upper case
 
+	if (upper_key == OF_KEY_SPACE) {
+		// Whether or not to draw the map
+		shouldDrawMap = !shouldDrawMap;
+	}
 }
 
 //--------------------------------------------------------------
@@ -167,4 +205,11 @@ void ofApp::drawPopulation()
 		simpleGeneticBot &gen_bot = pop1.generation[i];
 		drawSimpleGeneticBot(gen_bot);
 	}
+}
+
+void ofApp::drawMap()
+{
+	// Set background to gray and draw
+	ofBackground(50, 50, 50);
+	graph.draw();
 }
