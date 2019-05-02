@@ -28,7 +28,7 @@ void obstacle::update()
 	offset += 5;
 
 	ofVec2f v1;
-	v1.set(ofGetWindowWidth() / 2, 200 - offset % 170);
+	v1.set(ofGetWindowWidth() / 2, 200 - offset % 150);
 	top_corner = v1;
 
 	ofVec2f v2;

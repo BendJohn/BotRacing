@@ -1,4 +1,4 @@
-#include "testing.h"
+/*#include "testing.h"
 
 void testing::testingIsInObstacle()
 {
@@ -69,4 +69,4 @@ void testing::testingShouldDelete()
 		std::cout << "Error: Has crashed" << std::endl;
 	}
 
-}
+}*/

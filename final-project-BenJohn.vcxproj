@@ -203,6 +203,7 @@
     <ClCompile Include="src\population.cpp" />
     <ClCompile Include="src\randomBot.cpp" />
     <ClCompile Include="src\simpleGeneticBot.cpp" />
+    <ClCompile Include="src\testing.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\conditionalBot.h" />
@@ -226,6 +227,7 @@
     <ClInclude Include="src\population.h" />
     <ClInclude Include="src\randomBot.h" />
     <ClInclude Include="src\simpleGeneticBot.h" />
+    <ClInclude Include="src\testing.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

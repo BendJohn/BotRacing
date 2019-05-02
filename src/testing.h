@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #include "ofApp.h"
 
 using namespace gameEngine;
@@ -8,4 +8,4 @@ namespace testing {
 	void testingIsInObstacle();
 	void testingHasCrashed();
 	void testingShouldDelete();
-}
+}*/
