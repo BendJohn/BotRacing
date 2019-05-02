@@ -27,8 +27,8 @@ void population::update(obstacle obs1)
 		std::cout << "-----------" << i << "-----------" << std::endl;
 	}*/
 	round++;
-	std::cout << "Round: " << round << std::endl;
-	std::cout << "Generation: " << gen_number << std::endl;
+	// std::cout << "Round: " << round << std::endl;
+	// std::cout << "Generation: " << gen_number << std::endl;
 	if (round >= kNumberOfNewMoves * (gen_number + 1)) {
 		nextGeneration();
 	}
