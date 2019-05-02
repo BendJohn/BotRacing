@@ -59,9 +59,9 @@ void simpleGeneticBot::update()
 		return;
 	}
 
-	if (new_moves.size() > move_number) {
-		std::cout << new_moves[move_number] << std::endl;
-	}
+	/*if (new_moves.size() > move_number) {
+		std::cout << new_moves[move_number] << " for move " << move_number << std::endl;
+	}*/
 
 	if (next_move == RIGHT) {
 		ofVec2f new_top_corner(top_corner.x + 10, top_corner.y);

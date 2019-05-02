@@ -65,6 +65,9 @@ ofVec2f conditionalBot::getSize()
 
 int conditionalBot::getFitness()
 {
+	if (top_corner.x >= ofGetWindowWidth()) {
+		return 0;
+	}
 	return (top_corner.x * top_corner.x - top_corner.y * top_corner.x) * boxsize.x;
 }
 

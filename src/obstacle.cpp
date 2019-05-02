@@ -9,11 +9,11 @@ obstacle::obstacle(ofVec2f v1, ofVec2f v2)
 obstacle::obstacle()
 {
 	ofVec2f v1;
-	v1.set(ofGetWindowWidth() / 2, 100);
+	v1.set(ofGetWindowWidth() / 2, 200);
 	top_corner = v1;
 
 	ofVec2f v2;
-	v2.set(50, ofGetWindowHeight() - 100);
+	v2.set(50, ofGetWindowHeight() - 200);
 	top_boxsize = v2;
 
 	ofVec2f v3;
@@ -25,10 +25,10 @@ obstacle::obstacle()
 
 void obstacle::update()
 {
-	offset += 10;
+	offset += 5;
 
 	ofVec2f v1;
-	v1.set(ofGetWindowWidth() / 2, 100 - offset % 100);
+	v1.set(ofGetWindowWidth() / 2, 200 - offset % 170);
 	top_corner = v1;
 
 	ofVec2f v2;

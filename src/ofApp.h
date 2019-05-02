@@ -42,5 +42,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
 		const int OF_KEY_SPACE = 32;
+		ofTrueTypeFont graphFont;
 		ofxGraph graph;
 };

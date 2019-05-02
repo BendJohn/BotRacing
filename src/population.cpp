@@ -2,7 +2,7 @@
 
 using namespace gameEngine;
 
-int kNumberOfBots = 100;
+int kNumberOfBots = 200;
 int kNumberOfNewMoves = 10;
 
 population::population()
@@ -32,19 +32,22 @@ void population::update(obstacle obs1)
 	if (round >= kNumberOfNewMoves * (gen_number + 1)) {
 		nextGeneration();
 	}
+	for (size_t i = 0; i < generation.size(); i++) {
+		simpleGeneticBot &gen_bot = generation[i];
+		gen_bot.update();
+	}
 }
 
 vector<simpleGeneticBot> population::sortByFitness()
 {
 	vector<simpleGeneticBot> fit_bots;
-	for (size_t i = 0; i < generation.size() / 2; i++) {
-		int max_i = 0;
+	int max_i = 0;
+	for (size_t i = 0; i < generation.size() / 3; i++) {
 		int max_fitness = 0;
 		for (size_t j = 0; j < generation.size(); j++) {
 			simpleGeneticBot& genBot = generation[j];
 			int fitness = genBot.getFitness();
-			ofVec2f size = genBot.getSize();
-			if (fitness > max_fitness && size.x != 0) {
+			if (fitness > max_fitness && fitness != 0) {
 				max_fitness = fitness;
 				max_i = j;
 			}
@@ -64,6 +67,7 @@ void population::nextGeneration()
 		simpleGeneticBot& prevGenBot = fit_bots[i];
 		vector<BotDirection> dirs = prevGenBot.getNewMoves();
 		simpleGeneticBot genBot = simpleGeneticBot(dirs);
+		generation.push_back(genBot);
 		generation.push_back(genBot);
 		generation.push_back(genBot);
 	}
