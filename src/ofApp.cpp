@@ -38,6 +38,8 @@ void ofApp::setup(){
 
 //--------------------------------------------------------------
 void ofApp::update(){
+	rand1.update(); // Updates random bot movement
+	cond1.update(); // Updates random bot movement
 	pop1.update(obs1);
 	obs1.update();
 
@@ -80,6 +82,14 @@ void ofApp::keyPressed(int key){
 	if (upper_key == OF_KEY_SPACE) {
 		// Whether or not to draw the map
 		shouldDrawMap = !shouldDrawMap;
+	}
+
+	if (upper_key == 'N') {
+		// To skip a generation
+		for (size_t i = 0; i < 10 * (pop1.getGen_number() + 1) - pop1.getRound(); i++) {
+			pop1.update(obs1);
+	obs1.update();
+		}
 	}
 }
 
@@ -134,7 +144,6 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 }
 
 void ofApp::drawObstacle() {
-	obs1.update();
 	ofVec2f top_position = obs1.getTopCorner();
 	ofVec2f bottom_position = obs1.getBottomCorner();
 	ofVec2f top_size = obs1.getTopSize();
@@ -163,7 +172,6 @@ void ofApp::drawRandomBot()
 	ofSetColor(225, 0, 0); // set color to red
 	ofDrawRectangle(bot); // Draw random bot square
 	ofSetColor(255, 255, 255); // revert color back to white
-	rand1.update(); // Updates random bot movement
 }
 
 void ofApp::drawConditionalBot()
@@ -181,10 +189,9 @@ void ofApp::drawConditionalBot()
 	ofSetColor(0, 100, 0); // set color to dark green
 	ofDrawRectangle(bot); // Draw random bot square
 	ofSetColor(255, 255, 255); // revert color back to white
-	cond1.update(); // Updates random bot movement
 }
 
-void ofApp::drawSimpleGeneticBot(simpleGeneticBot& gen)
+void ofApp::drawSimpleGeneticBot(simpleGeneticBot& gen, int r, int g, int b)
 {
 	ofVec2f top_position = gen.getTopCorner();
 	ofVec2f size = gen.getSize();
@@ -196,7 +203,7 @@ void ofApp::drawSimpleGeneticBot(simpleGeneticBot& gen)
 	}
 
 	ofRectangle bot(top_position.x, top_position.y, size.x, size.y);
-	ofSetColor(0, 0, 0); // set color to black
+	ofSetColor(r, g, b); // set color to black
 	ofDrawRectangle(bot); // Draw genetic bot square
 	ofSetColor(255, 255, 255); // revert color back to white
 	gen.update(); // Updates random bot movement
@@ -204,10 +211,13 @@ void ofApp::drawSimpleGeneticBot(simpleGeneticBot& gen)
 
 void ofApp::drawPopulation()
 {
-	for (size_t i = 0; i < pop1.generation.size(); i++) {
+	for (size_t i = 1; i < pop1.generation.size(); i++) {
 		simpleGeneticBot &gen_bot = pop1.generation[i];
-		drawSimpleGeneticBot(gen_bot);
+		drawSimpleGeneticBot(gen_bot, 100, 100, 100);
 	}
+
+	simpleGeneticBot &gen_bot = pop1.generation[0];
+	drawSimpleGeneticBot(gen_bot, 0, 0, 0); // set color to yellow
 }
 
 void ofApp::drawMap()

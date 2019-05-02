@@ -70,3 +70,11 @@ Graph is now multiplot graphing the fitness of the genetic bot, hopefully will g
 Problems:
 1. The program still moves the bot after it "dies" -- waste of space.<br/>
 2. Need to add title to the graph so it looks nicer :)<br/>
+#### 5/i/2019
+Found the genetic populations top speciman and tracked it by making it a different color. I knew the top speciman was the first one in the list of bots, because that is how I created the next generation.<br/>
+I am wokrking on being able to skip generations to make it easier for the project presention.<br/>
+##### ToDo <br/>
+Problems:
+1. The program still moves the bot after it "dies" -- waste of space.<br/>
+2. Need to add title to the graph so it looks nicer :)<br/>
+3. Usee 'N' to skip generations

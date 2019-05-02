@@ -70,3 +70,13 @@ void population::nextGeneration()
 	gen_number++;
 	round = 0;
 }
+
+int population::getGen_number()
+{
+	return gen_number;
+}
+
+int population::getRound()
+{
+	return round;
+}

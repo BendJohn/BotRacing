@@ -12,4 +12,6 @@ public:
 	void update(obstacle obs1); // Update each genetic bot in vector
 	vector<simpleGeneticBot> sortByFitness(); // Sorts the generation vector by fitness.
 	void nextGeneration(); // Creates the next genration of genetic bots.
+	int getGen_number(); // Gets the generation number
+	int getRound(); // Gets the round number
 };
