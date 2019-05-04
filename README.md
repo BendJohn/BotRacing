@@ -1,4 +1,4 @@
-# Final Project
+# Bot Racing
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Yo2SepcNyw4" target="_blank"><img src="http://img.youtube.com/vi/Yo2SepcNyw4/0.jpg" alt="AI learns to play World's Hardest Game" width="480" height="360" border="10" /></a>
 <br />The above video and a fellow student named _Brian Furman_ are the inspiration for this project.
 ## Mission

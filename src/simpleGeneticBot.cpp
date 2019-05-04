@@ -99,7 +99,8 @@ int simpleGeneticBot::getMoveNumber()
 
 int simpleGeneticBot::getFitness()
 {
-	return (top_corner.x * top_corner.x - top_corner.y * top_corner.x) * boxsize.x;
+	int x = ofGetWindowWidth() - abs(top_corner.x - ofGetWindowWidth());
+	return (top_corner.x * top_corner.x - top_corner.y * x) * boxsize.x;
 }
 
 vector<BotDirection> simpleGeneticBot::getNewMoves()
