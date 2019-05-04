@@ -26,8 +26,13 @@
 Most of the libraries I will use will be to create the graphics of the problem games. The libraries I will use are as follows:
 1. *ofSoundPlayer*: An openframeworks library that produces sound that will enhance the games in the problems. Like a victory noise.
 2. *ofxGui*: Since the minigames will be like the snake game, it will need this library. It will also let the user compare its choices to an AIs
-3. *ofxChart*: To graph the differences in the AI bots, and to compare them against one another.
+3. *ofxGraph*: To graph the differences in the AI bots, and to compare them against one another.
 
 ## Minimum Viable Product
 The minimum viable product is to create an application with 3 AI bots for 1 minigame and chart the differences in time of the three minibots.
 The mimimum viable graphics would be two pages, one with a single minigame and another with the results that automatically pop up after all the AI bots succeed.
+
+## Resources
+Used Microsoft Visual Studio 2017
+Installed Openframeworks package
+Installed ofxGraph: https://github.com/TetsuakiBaba/ofxGraph
